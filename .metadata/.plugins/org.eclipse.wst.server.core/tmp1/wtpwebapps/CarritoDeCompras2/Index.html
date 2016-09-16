@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="OperacionApp">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+<title>Carrito de Compras</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/general.css" rel="stylesheet">
+
+<script src="js/angular.js"></script>
+<script src="js/operacion.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.1.0.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+	$("#articulos").click(function(){
+		if($(this).val() != ""){
+			$("#seleccion").show();
+		} else {
+			$("#seleccion").hide();
+		}
+	});
+	
+	$
+
+});
+</script>
+
+<script>
+
+function calcTot() {
+	
+	var tablaReg = document.getElementById("compra");
+
+	//for (var i = 1; i < tablaReg.rows.length -1; i++) {
+		alert(tablaReg.rows[1].cells[3].innerHTML);
+			
+	//}
+}
+</script>
+
+<script>
+	$(function(){
+		$("#aceptar").click(function(){
+			var producto = [];
+
+			producto.push({"articulo": $(".articulos").val(), "cantidad": $("#cantidadart").val(), "subtotal": $(".subtl").val()});
+			localStorage.setItem("productos", JSON.stringify(producto));
+		});
+	});
+</script>
+
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><b>Carrito de Compras</b></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+		
+		<div id="container" ng-controller="OperacionController" class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-1">
+			<div id="div_articulos" class="form-group">
+				<h3><b>Compra</b></h3>
+				<form>
+					<table class="table" responsive id="cant_art" id="compra">
+						<tr>
+							<th>Articulo</th>
+							<th>Precio Unitario</th>
+							<th>Cantidad</th>
+							<th>Subtotal</th>
+						</tr>
+						<tr ng-repeat="producto in productos">
+							<td><input class="articulos" readonly value="{{producto.articulo}}"></td>
+							<td>$  {{producto.precio}}</td>
+							<td><input type="number" class="form-control" id="cantidadart" placeholder="Cantidad" min="0" ng-model="cantidad"></td>
+							<td><input readonly class="subtl" id="subtotal" value="{{producto.precio * cantidad}}"></td>
+						</tr>
+						<tr>
+							<td><b>Total</b></td>
+							<td></td>
+							<td></td>
+							<td><input id="total" class="totl" readonly></td>
+						</tr>
+					</table>
+					<button class="btn btn-success" id="aceptar" onclick="calcTot()">Realizar Pedido</button>
+					<button class="btn btn-danger" onclick="location.href='Index.html'">Cancelar</button>
+				</form>
+			</div>
+		</div> <!-- container -->
+
+</body>
+</html>

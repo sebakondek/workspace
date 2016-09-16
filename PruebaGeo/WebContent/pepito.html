@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+<script src="js/jquery-3.1.0.js"></script>
+
+<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+</style>
+
+<script>
+function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'block' || e.style.display=='')
+    {
+        e.style.display = 'none';
+    }
+    else 
+    {
+        e.style.display = 'block';
+    }
+};
+</script>
+
+ </head>
+ <body>
+	<div>
+		<input type="text" id="lugar" size="30">&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="buscar">Buscar</button>&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="toggle_visibility('map')" id="toggle">Mostrar/Ocultar Mapa</button>
+	</div>
+
+    <div id="map"></div>
+	<script>
+
+		function initMap() {
+			var myLatLng = {lat: 40.731, lng: -73.997};
+		 	 var map = new google.maps.Map(document.getElementById('map'), {
+		  	  center: myLatLng,
+		  	  zoom: 8
+			  });
+		  
+			  var marker = new google.maps.Marker({
+			    position: myLatLng,
+			    map: map,
+			  });
+			  
+			  var geocoder = new google.maps.Geocoder();
+
+			  document.getElementById('buscar').addEventListener('click', function() {
+			    geocodeAddress(geocoder, map);
+			  });
+		};
+		
+		function geocodeAddress(geocoder, resultsMap) {
+			  var address = document.getElementById('lugar').value;
+			  geocoder.geocode({'address': address}, function(results, status) {
+			    if (status === google.maps.GeocoderStatus.OK) {
+			      resultsMap.setCenter(results[0].geometry.location);
+			      var marker = new google.maps.Marker({
+			        map: resultsMap,
+			        position: results[0].geometry.location
+			      });
+			    } else {
+			      alert('Geocode was not successful for the following reason: ' + status);
+			    };
+			  });
+		};
+		
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm0grVxnb9qXA7EhxqxO2bTDzpw5nYZ-4&callback=initMap"
+        async defer></script>
+  </body>
+</html>

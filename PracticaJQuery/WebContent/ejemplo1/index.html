@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html ng-app="holaMundoApp">
+  <head>
+	<script src="js/angular.js"></script>
+	<script src="js/hola_mundo_controller.js"></script>
+  </head>
+  <body>
+<!--     <h2>Hola Mundo</h2> -->
+<!--     <div ng-controller="HolaMundoController"> -->
+      
+<!-- 	  <input type="input" ng-model="nombre"><strong>{{nombre}}</span> -->
+<!-- 	  <a href="" ng-click="saludarClick()">Saludar</a> -->
+<!-- 	  <strong>{{saludo}}</span> -->
+	  
+<!--     </div> -->
+	
+	<div ng-controller = "HolaMundoController">
+		
+<!-- 		Numero 1:<input type="number" ng-model="num1"><br><br> -->
+<!-- 		Numero 2:<input type="number" ng-model="num2"><br><br> -->
+<!-- 		<button type="button" ng-click="sumar()">Sumar</button> -->
+<!-- 		<button type="button" ng-click="restar()">Restar</button> -->
+<!-- 		<button type="button" ng-click="multiplicar()">Multiplicar</button> -->
+<!-- 		<button type="button" ng-click="dividir()">Dividir</button><br><br> -->
+<!-- 		Resultado: <b>{{resultado}}</b> -->
+	
+			Numero 1:<input type="number" ng-change="operar()" ng-model="num1" placeholder="Numero 1"><br><br>
+			Numero 2:<input type="number" ng-change="operar()" ng-model="num2" placeholder="Numero 2"><br><br>
+			<select ng-change="operar()" ng-model="operacion">
+				<option value="sumar">Sumar</option>
+				<option value="restar">Restar</option>
+				<option value="multiplicar">Multiplicar</option>
+				<option value="dividir">Dividir</option>
+			</select>
+			<hr>
+			Resultado: <b>{{resultado}}</b>
+			
+	</div>
+  </body>
+</html>

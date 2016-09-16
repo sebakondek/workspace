@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Parcial no parcial</title>
+
+   <script src="js/jquery.validate.js"></script>
+   
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/general.css" rel="stylesheet">
+    
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+    	$(document).ready(function(){
+    		$("#btnCancelar").click(function(){
+    			location.href="Home.html";
+    		});
+    	});
+    </script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="Home.html"><img src="img/cognizant-logo.png" id="logo"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="Home.html">Home</a></li>
+            <li><a href="Formulario.html">Formulario</a></li>
+            <li><a href="Listado.html">Listado</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+		<div id="titulos"><h1 id="titulo2"><b>Formulario</b></h1></div>
+		
+		<div class="forms col-md-6 col-md-offset-2">
+			<form>
+				<div class="form-group">
+				    <label for="nombre">Nombre</label>
+				    <input type="text" class="form-control" id="nombre" placeholder="Nombre" minlength="4" required>
+				</div>
+				<div class="form-group">
+				    <label for="apellido">Apellido</label>
+				    <input type="text" class="form-control" id="apellido" placeholder="Apellido" minlength="3" required>
+				</div>
+				<div class="form-group">
+					<label for="sexo">Sexo</label><br>
+				      <div>
+				        <label for="radio1"></label>Masculino
+				         <input type="radio" name="myradiogroup1" id="radio1" value="masculino" required/>
+				        <label for="radio2"></label>Femenino
+				         <input type="radio" name="myradiogroup1" id="radio2" value="femenino"/>
+				      </div>
+				  </div>
+				<div class="form-group">
+					<label for="direccion">Direccion</label>
+					<input type="text" class="form-control" id="direccion" placeholder="Direccion" minlength="4" required>
+				</div>
+				<div class="form-group">
+					<label for="Localidad">Localidad</label>
+						<select class="form-control" required>
+							<option></option>
+							<option>Ciudad Autónoma de Buenos Aires</option>
+							<option>GBA Norte</option>
+							<option>GBA Sur</option>
+							<option>GBA Oeste</option>
+						</select>
+				</div>
+				<div class="form-group">
+					<label for="gustos">Gustos</label><br>
+					<div class="checkbox">
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="checkbox1" value="milanesa"> Milanesa
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="checkbox2" value="hamburguesa"> Hamburguesa
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="checkbox3" value="choripan"> Choripan
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="checkbox3" value="salchicha"> Salchicha
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="notas">Notas</label>
+					<textarea class="form-control" rows="3"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-success" id="btnAceptar">Aceptar</button>
+					<button type="button" class="btn btn-danger" id="btnCancelar">Cancelar</button>
+				</div>
+			</form>
+		</div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!--     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script> -->
+    
+  </body>
+</html>

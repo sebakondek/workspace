@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+<script src="js/jquery.validate.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+// 	var contador = 0;
+	
+// 	$(document).ready(function() {
+		
+// 		$("#mostrarDatosBtn").click(function(){
+// 			contador ++;
+// 			$("#divContenedor").show("slow");
+// 			$("#divContenedor").append("<b>Hola " + contador + "</b><br>");
+// 			$("#ocultarDatosBtn").fadeIn();
+// 		});
+		
+// 		$("#ocultarDatosBtn").click(function(){
+// 			$("#divContenedor").hide("slow");
+// 			$("#ocultarDatosBtn").hide();
+// 		});
+// 	});
+	
+	$(document).ready(function(){
+		$("#LinkIrClarin").click(function(event){
+			event.preventDefault();
+			$("#divTexto").html("Hola!!!");
+		});
+	});
+</script>
+</head>
+<body>
+<!-- 	<div id="divContenedor"></div> -->
+<!-- 	<input id="mostrarDatosBtn" type="button" value="mostrar datos"> -->
+<!-- 	<input id="ocultarDatosBtn" type="button" value="ocultar datos" hidden> -->
+	<div id="divTexto"></div>
+	<a id="LinkIrClarin" href="http://www.clarin.com">Ir a clarin</a>
+
+</body>
+</html>

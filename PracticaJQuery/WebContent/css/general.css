@@ -1,0 +1,11 @@
+.row {
+	padding-top: 40px;
+	text-align: center;
+}
+.table-responsive {
+	padding-top: 80px;
+}
+
+.borrar {
+	background-color: red;
+}

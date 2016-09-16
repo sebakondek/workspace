@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Alta Vehicular</title>
+
+<link href="css/general.css" rel="stylesheet">
+<script src="js/jquery-3.1.0.js"></script>
+
+<script>
+$(document).ready(function(){	
+	
+		$("#op1").click(function(){
+			if($(this).is(":checked")) {
+				$("#opocultas1").show();
+				$("#opocultas2").hide();
+			}
+		});
+		
+		$("#op2").click(function(){
+			if($("#op2").is(":checked")) {
+				$("#opocultas1").hide();
+				$("#opocultas2").show();
+			}
+		});
+		
+		$("#marca").change(function(){
+			var str = $(this).val();
+			
+			switch(str){
+				case "fiat": 
+					$("#opocultasfiat").show();
+					$("#opocultasvolks").hide();
+					$("#opocultasford").hide();
+					break;
+				case "volkswagen": 
+					$("#opocultasvolks").show();
+					$("#opocultasfiat").hide();
+					$("#opocultasford").hide();
+					break;
+				case "ford": 
+					$("#opocultasford").show();
+					$("#opocultasvolks").hide();
+					$("#opocultasfiat").hide();
+					break;
+			}
+		});
+		
+});
+</script>
+</head>
+<body>
+
+	<div id="container">
+		<div id="divTitutlo"><h1 id="titulo">Autos</h1><hr></div>
+		<form>
+			<div id="datos">
+				<input type="text" size="30" placeholder="Nombre" id="nombre">
+				<input type="number" size="30" placeholder="DNI" id="dni"><br>
+				<input type="text" size="30" placeholder="Apellido" id="apellido">
+				<input type="number" size="30" placeholder="Telefono" id="telefono"><br>
+				<hr>
+			</div>
+		</form>
+		<div id="opciones">
+			<h2 id="subtitulo">Opciones de Poliza</h2>
+			<label id="opcion"><b>Auto Nuevo</b></label>
+			<form>
+				<div id="radiooptions">
+					<input type="radio" name="option" id="op1">Si</input>
+					<input type="radio" name="option" id="op2">No</input>
+				</div>
+			</form>
+		</div>
+		<form>
+			<div id="opocultas1" hidden>
+				<textarea rows="5" cols="40" placeholder="Descripcion"></textarea>
+				<select id="marca">
+					<option vlaue=""/>
+					<option value="fiat">Fiat</option>
+					<option value="volkswagen">Volkswagen</option>
+					<option value="ford">Ford</option>
+				</select>
+			</div>
+				<div id="opocultasfiat" hidden>
+					<select>
+						<option value="fiat1">Fiat1</option>
+						<option value="fiat2">Fiat2</option>
+						<option value="fiat3">Fiat3</option>
+					</select>
+				</div>
+				<div id="opocultasvolks" hidden>
+					<select>
+						<option value="volks1">Volkswagen1</option>
+						<option value="volks2">Volkswagen2</option>
+						<option value="volks3">Volkswagen3</option>
+					</select>
+				</div>
+				<div id="opocultasford" hidden>
+					<select>
+						<option value="ford1">Ford1</option>
+						<option value="ford2">Ford2</option>
+						<option value="ford3">Ford3</option>
+					</select>
+				</div>
+			<div id="opocultas2" hidden>
+				
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html ng-app="holaMundoApp">
+  <head>
+	<script src="js/angular.js"></script>
+	<script src="js/hola_mundo_controller.js"></script>
+  </head>
+  <body>
+    <h2>Hola Mundo</h2>
+    <div ng-controller="HolaMundoController">
+      
+	  <input type="input" ng-model="nombre"><strong>{{nombre}}</span>
+	  <a href="" ng-click="saludarClick()">Saludar</a>
+	  <strong>{{saludo}}</span>
+	  
+    </div>
+	
+  </body>
+</html>

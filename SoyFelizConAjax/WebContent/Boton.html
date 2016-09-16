@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<script src="js/jquery-3.1.0.js"></script>
+	<script>
+		$(function(){
+			$("#boton").click(function(){
+				var campoNombre = $("#campoNombre").val();
+				$.post("ejemploget.jsp", {nombre : campoNombre}, function(respuesta){
+					$("#divContenido").html(respuesta);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+
+	Nombre: <input type="text" id="campoNombre">
+	
+	<button type="button" id="boton">Clickeame</button>
+	
+	<div id="divContenido"></div>
+</body>
+</html>

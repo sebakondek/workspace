@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PracticaDante/WebContent/css/general&apos; to &apos;general.css&apos;" description="Rename resource &apos;general&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/css/general" name="general.css" stamp="1472482964980" updateReferences="true"/>
+</session>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="js/jquery-3.1.0.js"></script>
+<script>
+	$(function(){
+		$("#botonLlamarJSON").click(function(){
+			$.getJSON("respuestajson.jsp", function(response){
+				alert(response.nombre + " " + response.edad);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+
+	<button type="button" id="botonLlamarJSON">JSON</button>
+</body>
+</html>

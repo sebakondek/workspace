@@ -1,0 +1,22 @@
+#titulo {
+	text-align: center;
+}
+
+#datos {
+	margin-top: 40px;
+	text-align: center;
+}
+
+#nombre {
+	margin-right: 20px;
+}
+
+#apellido {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+}
+
+#opocultas {
+	margin-top: 30px;
+}

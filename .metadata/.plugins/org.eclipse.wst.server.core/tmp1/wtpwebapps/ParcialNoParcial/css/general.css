@@ -1,0 +1,87 @@
+#logo{
+	padding-right: 100px;
+	margin-right: 40px;
+}
+
+.imagenes{
+	width: 300px;
+}
+
+.row {
+	padding-top: 70px;
+	text-align: center;
+}
+
+#formulario {
+	padding-top: 30px; 
+	font-weight: bold;
+	font-size: 40px;
+	padding-bottom: 50px;
+}
+
+#listado {
+	padding-top: 30px; 
+	font-weight: bold;
+	font-size: 40px;
+	padding-bottom: 50px;
+}
+
+.navbar-inverse {
+  background-color: lightgray;
+  border-color: #080808;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #080808;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #080808;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+#titulos {
+	background-color: transparent;
+	margin-top: 80px;
+	font-size: 60px;
+}
+
+#titulo1 {
+	color: green;
+	text-shadow: 5px 5px #a5a0a0;	
+}
+
+.aceptar {
+	background-color: green;
+}
+
+.borrar {
+	background-color: #FF0000;
+}
+
+.radios{
+	text-decoration: none;
+}
+
+#titulotabla {
+	background-color: lightgray;
+}
+
+.table-responsive
+{
+    overflow-x: auto;
+}

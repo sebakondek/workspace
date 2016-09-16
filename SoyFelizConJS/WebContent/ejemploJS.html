@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mi segundo proyecto</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/general.css" rel="stylesheet">
+    
+	<script type="text/javascript">
+	
+	
+/* 		function saludar(){
+			
+			var campoNumero = document.getElementById("campoNumero");
+			var nombre ="<b>Juan</b>" + campoNumero.value;
+			var midDiv = document.getElementById("miDiv");
+			midDiv.innerHTML = nombre;
+			console.log(nombre);
+		}
+ */		
+		function operacionX() {
+			
+			var campo1 = document.getElementById("numero1");
+			var campo2 = document.getElementById("numero2");
+			var num1 = parseFloat(campo1.value);
+			var num2 = parseFloat(campo2.value);
+			
+			var operacion = document.getElementById("operacion");
+			var operar = operacion.value;
+			
+			switch(operar){
+			 case "sumar": sumar(num1,num2);
+			 	break;
+			 case "restar": restar(num1,num2);
+			 	break;
+			 case "multiplicar":  multiplicar(num1,num2);
+			 	break;
+			 case "dividir": dividir(num1,num2);
+			 	break;
+			}
+		}
+		
+		function sumar(num1,num2){
+			
+			var camporesult = document.getElementById("resultado");
+			total = num1 + num2;
+			camporesult.value = total;
+		}
+		
+		function restar(num1,num2){
+			
+			var camporesult = document.getElementById("resultado");
+			result = num1 - num2;
+			camporesult.value = result;
+		}
+		
+		function multiplicar(num1,num2){
+			
+			var camporesult = document.getElementById("resultado");
+			result = num1 * num2;
+			camporesult.value = result;
+		}
+		
+		function dividir(num1,num2){
+			
+			var camporesult = document.getElementById("resultado");
+			if(num2 != 0){
+				result = num1 / num2;
+				camporesult.value = result;
+			} else {
+				alert("NO SE PUEDE DIVIDIR POR 0");
+			}
+		}
+		
+	</script>
+	
+	<script src="js/jquery-3.1.0.js"></script>
+	<script>
+		$(function(){
+			$("#botonSumar").click(function(){
+				var datosForm = $("#miFormulario").serialize();
+				$.post("procesamiento.jsp", datosForm, function(resultado){
+					$("#divContenido").html(resultado);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<form id="miFormulario">
+		Numero 1: <input type="text" name="campoNum1"><br>
+		Numero 2: <input type="text" name="campoNum2"><br>
+		<button type="button" id="botonSumar" value="Sumar">Operame</button>
+	</form>
+		<div id="divContenido"></div>
+		
+		
+<!-- Hola!!!
+
+	<div id="miDiv"></div>
+	
+	Numero: <input type="number" id="campoNumero"><br>
+	
+	<input type="button" value="Saludar!!!" onclick="saludar()">
+-->
+
+<!--<h3>Calculadora</h3>
+	<div>
+	
+	Numero 1: <input type="number" id="numero1"><br>
+	Numero 2: <input type="number" id="numero2"><br>
+	<select id="operacion">
+		<option value="sumar">Sumar</option>
+		<option value="restar">Restar</option>
+		<option value="multiplicar">Multiplicar</option>
+		<option value="dividir">Dividir</option>
+	</select>
+	<input type="button" value="Operar" onclick="operacion()"><br>
+	Resultado: <input type ="number" id="resultado" readonly>
+	
+	</div>
+-->
+<!-- 	<div class="container"> -->
+<!-- 		<div class="col-md-6 col-md-offset-3"> -->
+<!-- 			<form> -->
+<!-- 				<div class="form-group"> -->
+<!-- 					<label for="titulo"><h2>Calculadora</h2></label> -->
+<!-- 				</div> -->
+<!-- 			  <div class="form-group"> -->
+<!-- 			    <label for="numero1">Primer Valor</label> -->
+<!-- 			    <input type="number" class="form-control" id="numero1" placeholder="Numero 1"> -->
+<!-- 			  </div> -->
+<!-- 			  <div class="form-group"> -->
+<!-- 			    <label for="numero2">Segundo Valor</label> -->
+<!-- 			    <input type="number" class="form-control" id="numero2" placeholder="Numero 2"> -->
+<!-- 			  </div> -->
+<!-- 			  <div class="form-group"> -->
+<!-- 			  	<label for="operacion">Operacion</label> -->
+<!-- 			  	<select class="form-control" id="operacion"> -->
+<!-- 					<option value="sumar">Sumar</option> -->
+<!-- 					<option value="restar">Restar</option> -->
+<!-- 					<option value="multiplicar">Multiplicar</option> -->
+<!-- 					<option value="dividir">Dividir</option> -->
+<!-- 				</select> -->
+<!-- 				</div> -->
+<!-- 				<div> -->
+<!-- 				  <button type="button" class="btn btn-default" onclick="operacionX()">Operar</button> -->
+<!-- 				</div> -->
+<!-- 			<div class="form-group"> -->
+<!-- 			    <label for="resultado">Resultado</label> -->
+<!-- 			    <input type="number" class="form-control" id="resultado" placeholder="Resultado" readonly> -->
+<!-- 			  </div> -->
+<!-- 			</form> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+
+</body>
+</html>

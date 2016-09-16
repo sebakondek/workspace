@@ -1,0 +1,25 @@
+#btnCarrito {
+	background-color: #99d2bb;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: transparent;
+}
+
+#div_articulos {
+	margin-top: 80px;
+}
+
+#subtotal {
+	margin-top: 20px;
+}
+
+.form-control {
+	width: 50%;
+}
+
+.subtl, .articulos, .tot {
+	border: none;
+}

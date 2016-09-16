@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+// 	var personas = [
+// 	                {"nombre":"Juan", "edad":33},
+// 	                {"nombre":"Maria", "edad":35},
+// 	                {"nombre":"Lucas", "edad":38}
+// 	               ];
+	
+// 	for(var x=0; x < personas.length; x++) {
+// 		var p = personas[x];
+// 		alert(p.nombre + " " + p.edad);
+// 	}
+	
+	
+	function Persona(nombre, edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.saludar = function() {
+			alert("Hola a todos...");
+		}
+	}
+	
+	var p1 = new Persona("Juan", 45);
+	alert(p1.nombre);
+	p1.saludar();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
